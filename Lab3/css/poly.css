@@ -1,0 +1,130 @@
+/* Header Css */
+.shopping-mall {
+    bottom: 20px;
+    font-variant: small-caps;
+}
+.shopping-mall>h1 {
+    font-family: Impact;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted gray;
+    margin: 0px;
+}
+
+.shopping-mall>h5 {
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+
+
+/* Menu Css */
+.navbar {
+    border-radius: 5px;
+    padding: 0px 16px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0px 5px;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: black;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.bi {
+    padding-right: 5px;
+    font-weight: bolder;
+}
+
+
+/* Aside Css */
+.border {
+    border-radius: 5px;
+}
+
+aside.col-sm-3.row {
+    padding: 5px;
+}
+
+.poly-card {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 1rem 0px;
+}
+
+.poly-card img {
+    width: 5rem;
+    margin-left: 50px;
+}
+
+.search {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.list-content {
+    margin-bottom: 1rem;
+}
+
+.list-group-item.disabled {
+    background-color: #E6E6E6;
+    font-weight: bold;
+}
+
+.list-group .list-group-item:hover {
+    background-color: blue;
+    color: white;
+    font-weight: bolder;
+}
+
+
+/* arcticle Css */
+.poly-pord {
+    width: 100%;
+    border: 1px solid gainsboro;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.panel-heading {
+    background-color: #E6E6E6;
+}
+
+.panel-heading p {
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+.panel-body img {
+    margin: 1rem 0px;
+    width: 6rem;
+}
+
+.panel-footer {
+    background-color: #E6E6E6;
+}
+
+.panel-footer p {
+    margin: 0px;
+    padding: 5px 0px;
+}
+img.col-sm-4{
+   width: 260px; 
+}
+.img-thumbnail{
+    width: 50px;
+    height: 50px;
+}
+.card-body .img-thumbnail{
+    width: 280px;
+    height: 200px;
+}
