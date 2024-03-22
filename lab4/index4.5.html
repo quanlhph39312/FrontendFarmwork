@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>Tiêu đề</title>
+    <!-- Các thẻ meta cần thiết -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="myController">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 border mt-5 ">
+                <form>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Họ và tên</label>
+                        <input type="text" ng-model="student.Fullname" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Ngày sinh</label>
+                        <input type="text" ng-model="student.Date" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Giới tính</label>
+                        <select class="form-select form-select-lg" ng-model="student.Gender">
+                            <option>Nam</option>
+                            <option>Nữ</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <slabel for="" class="form-label">Điểm</slabel>
+                        <input type="text" ng-model="student.Mark" class="form-control" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <slabel for="" class="form-label">Học lực</slabel>
+                        <input type="text" ng-model="student.grade" class="form-control" disabled readonly>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary" ng-click="Save()">Grader</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- AngularJS Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myController", function ($scope) {
+            $scope.Save = function () {
+                var a = parseFloat($scope.student.Mark);
+                console.log(a);
+                if( a < 5){
+                    $scope.student.grade = "Rớt";
+                }else{
+                    $scope.student.grade = "Đậu";
+                }
+            },
+            $scope.student = {
+                Fullname: "Lê Hồng Quân",
+                Date: "02/06/2001",
+                Gender: "Nam",
+                Mark: "9.0",
+                grade:"",
+            }
+        });
+    </script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
